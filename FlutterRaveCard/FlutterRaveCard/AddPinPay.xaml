@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FlutterRaveCard.AddPinPay">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Margin="10" LineBreakMode="WordWrap" FontSize="Subtitle"  
+                   Text="Please enter your card pin to continue your transaction"
+                HorizontalOptions="CenterAndExpand" />
+            
+            <StackLayout Margin="5,10">
+                <Label Text="PIN" Margin="7,0,0,0" TextColor="OrangeRed"/>
+                <Entry  x:Name="ValidInput" 
+                                                  IsTextPredictionEnabled="True" Keyboard="Numeric"  
+                                                   Margin="5,0,0,3"/>
+            </StackLayout>
+
+            <Button Text="ENTER" HorizontalOptions="Fill" Clicked="Btn_Clicked" Margin="5" TextColor="White" 
+                BackgroundColor="OrangeRed"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

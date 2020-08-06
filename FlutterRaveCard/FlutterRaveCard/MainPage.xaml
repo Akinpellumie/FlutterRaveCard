@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FlutterRaveCard.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+
+        <Label Text="Pay With Card" TextColor="Black" FontSize="Subtitle" FontAttributes="Bold" 
+              Margin="5" HorizontalOptions="Start"/>
+        
+        <StackLayout Margin="0,0,0,10">
+            <Label Text="Card Number" Margin="7,0,0,0" TextColor="OrangeRed"/>
+                <Entry  x:Name="CardInput" 
+                                                  IsTextPredictionEnabled="True" Keyboard="Numeric"  
+                                                   Margin="5,0,0,3"/>
+         </StackLayout>
+
+        <Grid>
+        <StackLayout Margin="0,0,0,10" Grid.Column="0">
+            <Label Text="Valid Till (MM/YY)" Margin="7,0,0,0" TextColor="OrangeRed"/>
+                <DatePicker x:Name="startDatePicker"
+                    Format="Y"
+                    Margin="5,0,0,3" />
+            </StackLayout>
+        
+        <StackLayout Margin="0,0,0,10" Grid.Column="1">
+            <Label Text="CVC/CVV2" Margin="7,0,0,0" TextColor="OrangeRed"/>
+            <Entry  x:Name="CVVInput" 
+                                                  IsTextPredictionEnabled="True" Keyboard="Numeric"  
+                                                   Margin="5,0,0,3"/>
+        </StackLayout>
+        </Grid>
+
+        <Button Text="Pay" HorizontalOptions="Fill" Margin="5" TextColor="White" 
+                BackgroundColor="OrangeRed" Clicked="PayBtn_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
